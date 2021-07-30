@@ -53,6 +53,7 @@ def player(prev_opponent_play, opponent_history = []):
             for k in potential_plays if k in play_order[0]
             }
         prediction = max(sub_order, key = sub_order.get)[-1:]
+        
         if(len(opponent_history) % 1000 == 0):
             opponent_list = [False, False, False, False]
             opponent_history.clear()
@@ -77,8 +78,8 @@ def player(prev_opponent_play, opponent_history = []):
 
     if(opponent_list[2]):
         if(len(opponent_history) % 1000 == 0):
-            opponent_history.clear()
             opponent_list = [False, False, False, False]
+            opponent_history.clear()
             
         prev_play = ideal_response[prev_play]
         return prev_play
@@ -88,12 +89,12 @@ def player(prev_opponent_play, opponent_history = []):
         opponent_list[3] = True
     
     if(opponent_list[3]):  
-        last_ten = my_history[-10:]
-        most_frequent = max(set(last_ten), key = last_ten.count)
         if(len(opponent_history) == 1000):
             opponent_list = [False, False, False, False]
             opponent_history.clear()
             
+        last_ten = my_history[-10:]
+        most_frequent = max(set(last_ten), key = last_ten.count)
         prev_play = ideal_response[most_frequent]
         return prev_play
     
