@@ -13,6 +13,3 @@ You should create a function called `predict_message` that takes a message strin
 For this challenge, you will use the [SMS Spam Collection dataset](http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/). The dataset has already been grouped into train data and test data.
 
 The first two cells import the libraries and data. The final cell tests your model and function. Add your code in between these cells.
-
-
-`
