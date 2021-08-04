@@ -1,2 +1,1 @@
-# freeCodeCamp-Machine-Learning-with-Python-Projects
-My solution
+![Image](https://i.imgur.com/1aOqc9S.png)
